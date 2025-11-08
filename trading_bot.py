@@ -41,7 +41,6 @@ import matplotlib.pyplot as plt
 from collections import defaultdict
 import pytz
 from itertools import product
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import feedparser
 
 
@@ -55,17 +54,7 @@ TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 api_key = os.getenv("FMP_API_KEY")
 NEWS_API_KEY = os.getenv("NEWS_API_KEY")
-print("KEY:", os.getenv("APCA_API_KEY_ID"))
 api = tradeapi.REST(ALPACA_KEY, ALPACA_SECRET, base_url=ALPACA_BASE_URL)
-
-EST = pytz.timezone("US/Eastern")
-
-# Optional email alerts
-EMAIL_SMTP = os.getenv("EMAIL_SMTP")  # e.g. smtp.gmail.com:587
-EMAIL_FROM = os.getenv("EMAIL_FROM")
-EMAIL_TO = os.getenv("EMAIL_TO")
-EMAIL_USER = os.getenv("EMAIL_USER")  # optional
-EMAIL_PASS = os.getenv("EMAIL_PASS")  # optional
 
 # Auto close settings
 CLOSE_LOSS_PCT = float(os.getenv("CLOSE_LOSS_PCT", "-5"))  # negative percent threshold to close (e.g. -5 -> -5%)
@@ -81,7 +70,6 @@ LOG_DIR = "logs"
 SIGNAL_DIR = "signals"
 MODEL_DIR = "models"
 
-# logging
 EST = pytz.timezone("US/Eastern")
 
 
@@ -1313,20 +1301,47 @@ def post_trading_analysis(tickers):
             )
         summary_lines.append(f"\n💰 Total Equity: {total_equity:.2f}")
         msg = "\n".join(summary_lines)
-        send_message(msg)
+        
         log_message(msg)
 
         # 4️⃣ Backup data and models
-        backup_folder = "backup_" + datetime.now().strftime("%Y%m%d")
-        os.makedirs(backup_folder, exist_ok=True)
-        # Save positions and equity
-        pd.DataFrame([{"Ticker": t, "Equity": equity[t], "Position": positions[t]} for t in tickers]) \
-            .to_csv(os.path.join(backup_folder, "positions_equity.csv"), index=False)
-        log_message(f"💾 Backups saved in {backup_folder}")
+        backup_to_google_sheet(tickers, positions, equity)
+        log_message(f"💾 Backups saved in Google sheet called Backup")
+        msg = msg + " \n  Backups saved in Google sheet called Backup"
+        send_message(msg)
 
     except Exception as e:
         log_message(f"❌ Failed during post-trading analysis: {e}")
         send_message(f"❌ Failed post-trading analysis: {e}")
+
+def backup_to_google_sheet(tickers, positions, equity):
+    """
+    Backup positions and equity to a dedicated Google Sheet tab 'Backup'.
+    Each run creates a timestamped snapshot.
+    """
+    try:
+        # Try to open or create the worksheet
+        try:
+            backup_ws = sheet.worksheet("Backup")
+        except gspread.WorksheetNotFound:
+            backup_ws = sheet.add_worksheet(title="Backup", rows="1000", cols="10")
+            backup_ws.append_row(["Timestamp", "Ticker", "Equity", "Position"])
+
+        now_str = datetime.now(EST).isoformat()
+
+        rows_to_append = []
+        for t in tickers:
+            pos_str = str(positions.get(t, None))
+            eq_val = equity.get(t, 1000)
+            rows_to_append.append([now_str, t, eq_val, pos_str])
+
+        # Append rows in batch
+        backup_ws.append_rows(rows_to_append)
+        log_message(f"💾 Backup written to Google Sheet 'Backup' for {len(tickers)} tickers at {now_str}")
+
+    except Exception as e:
+        log_message(f"❌ Failed to backup to Google Sheet: {e}")
+
 
 def sanitize_tickers(tickers):
     """
@@ -1832,7 +1847,13 @@ def execute_signal_via_alpaca(ticker: str, signal: str, last_bar: dict, model=No
 # -----------------------------
 def fetch_intraday_data(ticker):
     try:
-        bars = get_bars_cached(ticker)  # Replace with your own fetch function
+        file_path = f"data/{ticker}_latest.csv"
+
+        if os.path.exists(file_path):
+            bars = pd.read_csv(file_path)
+        else:
+            print(f"⚠️ No data file found for {ticker}, fetching fresh data...")
+            bars = get_bars_cached(ticker)  # Replace with your own fetch function
         return bars
     except Exception as e:
         send_message(f"Error fetching data for {ticker}: {e}")
@@ -1848,25 +1869,10 @@ def check_volume_spike(df):
     current_vol = df['volume'].iloc[-1]
     return current_vol > 2 * avg_vol
 
-# -----------------------------
-# NEWS / SENTIMENT
-# -----------------------------
-def get_news_sentiment(ticker):
-    url = f"https://newsapi.org/v2/everything?q={ticker}&apiKey={NEWS_API_KEY}"
-    try:
-        resp = requests.get(url).json()
-        articles = resp.get('articles', [])
-        sentiment = 0
-        positive_words = ["gain", "beat", "strong", "up"]
-        negative_words = ["loss", "miss", "weak", "down"]
-        for article in articles[:5]:
-            content = (article.get('title', '') + article.get('description', '')).lower()
-            sentiment += sum(1 for w in positive_words if w in content)
-            sentiment -= sum(1 for w in negative_words if w in content)
-        return sentiment / 5
-    except Exception as e:
-        send_message(f"Error fetching news for {ticker}: {e}")
-        return 0
+
+
+
+
 
 #################################################################
 ##################   LIVE TRADING MONITORING    ################################
@@ -1955,9 +1961,9 @@ def live_trading_session():
                 # -------------------------
                 # News / sentiment
                 # -------------------------
-                sentiment = get_news_sentiment(ticker)
-                if sentiment < -0.5:
-                    send_message(f"⚠️ Negative sentiment for {ticker}, consider avoiding trades")
+                # sentiment = get_news_sentiment(ticker)
+                # if sentiment < -0.5:
+                #     send_message(f"⚠️ Negative sentiment for {ticker}, consider avoiding trades")
 
                    
             except Exception as inner_e:
@@ -2002,17 +2008,6 @@ def extract_tickers_from_text(text):
     return {t for t in tickers if t.isupper() and 1 < len(t) <= 5 and t not in blacklist}
 
 
-def get_price(ticker):
-    """Fetch current price from Yahoo Finance."""
-    try:
-        url = f"https://query1.finance.yahoo.com/v7/finance/quote?symbols={ticker}"
-        resp = requests.get(url, timeout=5)
-        data = resp.json()
-        return data["quoteResponse"]["result"][0]["regularMarketPrice"]
-    except Exception:
-        return None
-
-
 def load_sent_cache():
     if os.path.exists(CACHE_FILE):
         with open(CACHE_FILE, "r") as f:
@@ -2050,12 +2045,6 @@ def format_news_item(n):
     tickers_text = ""
     if n["tickers"]:
         t_list = []
-        for t in n["tickers"]:
-            price = get_price(t)
-            if price:
-                t_list.append(f"{t} (${price:.2f})")
-            else:
-                t_list.append(t)
         tickers_text = " | ".join(t_list)
 
     return f"{emoji} <a href='{n['link']}'>{n['title']}</a>\n🧩 {tickers_text}\n"
@@ -2081,12 +2070,10 @@ def analyse_news_daily():
 
         # sentiment
         full_text = f"{n['title']} {n['summary']}"
-        sent_score = analyzer.polarity_scores(full_text)["compound"]
 
         # extract tickers
         tickers = extract_tickers_from_text(full_text)
 
-        n["sentiment"] = sent_score
         n["tickers"] = list(tickers)
         new_msgs.append(n)
         sent_ids.add(uid)
