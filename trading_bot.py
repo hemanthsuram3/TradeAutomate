@@ -2095,6 +2095,9 @@ def analyse_news_daily():
     print(f"✅ Sent {len(new_msgs)} new articles.")
     save_sent_cache({"sent_ids": list(sent_ids)})
 
+def iamAlive():
+    send_message(f"I am Alive and healthy at {datetime.now(EST)}")
+    
 # ================================
 # Entrypoint
 # ================================
@@ -2124,5 +2127,8 @@ if __name__ == "__main__":
     
     elif mode == "news":
         analyse_news_daily()
+        
+    elif mode == "hearthbeat":
+        iamAlive()
 
     
