@@ -84,7 +84,7 @@ jobs:
         run: python trading_bot.py news
 
       - name: Backtest + Auto-Train
-        if: github.event_name == 'news' && github.event.schedule == '0 */2 * * 6,0' || github.event.schedule == '30 13-21 * * 1-5'
+        if: github.event_name == 'hearthbeat' && github.event.schedule == '0 */2 * * 6,0' || github.event.schedule == '30 13-21 * * 1-5'
         env:
           ALPACA_KEY: ${{secrets.ALPACA_KEY}}
           ALPACA_SECRET: ${{secrets.ALPACA_SECRET}}
@@ -92,6 +92,6 @@ jobs:
           TELEGRAM_CHAT_ID: ${{secrets.TELEGRAM_CHAT_ID}}
           FMP_API_KEY: ${{secrets.FMP_API_KEY}}
           NEWS_API_KEY: ${{secrets.NEWS_API_KEY}}
-        run: python trading_bot.py news
+        run: python trading_bot.py hearthbeat
         
           
