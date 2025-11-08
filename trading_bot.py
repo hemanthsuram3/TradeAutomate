@@ -1832,13 +1832,7 @@ def execute_signal_via_alpaca(ticker: str, signal: str, last_bar: dict, model=No
 # -----------------------------
 def fetch_intraday_data(ticker):
     try:
-        file_path = f"data/{ticker}_latest.csv"
-
-        if os.path.exists(file_path):
-            bars = pd.read_csv(file_path)
-        else:
-            print(f"⚠️ No data file found for {ticker}, fetching fresh data...")
-            bars = get_bars_cached(ticker)  # Replace with your own fetch function
+        bars = get_bars_cached(ticker)  # Replace with your own fetch function
         return bars
     except Exception as e:
         send_message(f"Error fetching data for {ticker}: {e}")
@@ -1873,10 +1867,6 @@ def get_news_sentiment(ticker):
     except Exception as e:
         send_message(f"Error fetching news for {ticker}: {e}")
         return 0
-
-
-
-
 
 #################################################################
 ##################   LIVE TRADING MONITORING    ################################
