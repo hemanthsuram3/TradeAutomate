@@ -92,7 +92,6 @@ os.makedirs(MODEL_DIR, exist_ok=True)
 
 CACHE_FILE = "sent_news_cache.json"
 YAHOO_NEWS_FEED = "https://finance.yahoo.com/news/rssindex"
-analyzer = SentimentIntensityAnalyzer()
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s")
 def log_message(msg):
