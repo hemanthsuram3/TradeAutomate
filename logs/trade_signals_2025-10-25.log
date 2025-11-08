@@ -1,0 +1,494 @@
+[2025-10-25 15:42:15] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 15:42:18] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 15:42:18] No bars for AAPL
+[2025-10-25 15:42:18] No bars for AXP
+[2025-10-25 15:42:18] No bars for BAC
+[2025-10-25 15:42:18] No bars for NVDA
+[2025-10-25 15:42:18] No bars for TXN
+[2025-10-25 15:42:18] No bars for APLD
+[2025-10-25 15:56:44] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 15:56:47] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 15:56:47] No bars for AAPL
+[2025-10-25 15:56:47] No bars for AXP
+[2025-10-25 15:56:47] No bars for BAC
+[2025-10-25 15:56:47] No bars for NVDA
+[2025-10-25 15:56:47] No bars for TXN
+[2025-10-25 15:56:47] No bars for APLD
+[2025-10-25 15:57:49] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 15:57:52] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 15:57:52] No bars for AAPL
+[2025-10-25 15:57:52] No bars for AXP
+[2025-10-25 15:57:52] No bars for BAC
+[2025-10-25 15:57:52] No bars for NVDA
+[2025-10-25 15:57:52] No bars for TXN
+[2025-10-25 15:57:52] No bars for APLD
+[2025-10-25 15:58:42] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 15:58:45] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 15:58:45] No bars for AAPL
+[2025-10-25 15:58:45] No bars for AXP
+[2025-10-25 15:58:45] No bars for BAC
+[2025-10-25 15:58:45] No bars for NVDA
+[2025-10-25 15:58:45] No bars for TXN
+[2025-10-25 15:58:45] No bars for APLD
+[2025-10-25 15:59:57] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 15:59:59] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 15:59:59] ⚠️ Error analyzing AAPL: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:00] ⚠️ Error analyzing AXP: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:00] ⚠️ Error analyzing BAC: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:00] ⚠️ Error analyzing NVDA: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:00] ⚠️ Error analyzing TXN: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:00] ⚠️ Error analyzing APLD: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:39] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 16:00:42] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 16:00:42] ⚠️ Error analyzing AAPL: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:42] ⚠️ Error analyzing AXP: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:42] ⚠️ Error analyzing BAC: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:42] ⚠️ Error analyzing NVDA: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:42] ⚠️ Error analyzing TXN: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:42] ⚠️ Error analyzing APLD: 'BarsV2' object has no attribute 'empty'
+[2025-10-25 16:00:56] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 16:00:58] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 16:00:58] No bars for AAPL
+[2025-10-25 16:00:58] No bars for AXP
+[2025-10-25 16:00:58] No bars for BAC
+[2025-10-25 16:00:58] No bars for NVDA
+[2025-10-25 16:00:58] No bars for TXN
+[2025-10-25 16:00:58] No bars for APLD
+[2025-10-25 16:02:34] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 16:02:36] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 16:02:36] ⚠️ Error analyzing AAPL: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:02:36] ⚠️ Error analyzing AXP: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:02:36] ⚠️ Error analyzing BAC: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:02:36] ⚠️ Error analyzing NVDA: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:02:36] ⚠️ Error analyzing TXN: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:02:36] ⚠️ Error analyzing APLD: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:13] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 16:03:15] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 16:03:15] ⚠️ Error analyzing AAPL: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:15] ⚠️ Error analyzing AXP: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:15] ⚠️ Error analyzing BAC: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:15] ⚠️ Error analyzing NVDA: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:15] ⚠️ Error analyzing TXN: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:15] ⚠️ Error analyzing APLD: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:39] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 16:03:41] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 16:03:41] ⚠️ Error analyzing AAPL: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:41] ⚠️ Error analyzing AXP: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:41] ⚠️ Error analyzing BAC: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:41] ⚠️ Error analyzing NVDA: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:41] ⚠️ Error analyzing TXN: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:03:41] ⚠️ Error analyzing APLD: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:05:30] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 16:05:33] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 16:05:33] ⚠️ Error analyzing AAPL: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:05:33] ⚠️ Error analyzing AXP: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:05:33] ⚠️ Error analyzing BAC: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:05:33] ⚠️ Error analyzing NVDA: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:05:33] ⚠️ Error analyzing TXN: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:05:33] ⚠️ Error analyzing APLD: REST.get_bars() got an unexpected keyword argument 'extended_hours'
+[2025-10-25 16:13:10] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 16:13:12] 📊 Starting previous-day analysis for 2025-10-25
+[2025-10-25 16:13:13] No bars for AAPL
+[2025-10-25 16:13:13] No bars for AXP
+[2025-10-25 16:13:13] No bars for BAC
+[2025-10-25 16:13:13] No bars for NVDA
+[2025-10-25 16:13:13] No bars for TXN
+[2025-10-25 16:13:13] No bars for APLD
+[2025-10-25 16:50:43] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 20:06:57] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 20:07:00] 📊 Starting previous-day analysis for 2025-10-25 up to 20:07:00.046552
+[2025-10-25 20:07:00] No bars for AAPL
+[2025-10-25 20:07:00] No bars for AXP
+[2025-10-25 20:07:00] No bars for BAC
+[2025-10-25 20:07:00] No bars for NVDA
+[2025-10-25 20:07:00] No bars for TXN
+[2025-10-25 20:07:00] No bars for APLD
+[2025-10-25 20:07:00] 📌 Full-day analysis completed.
+[2025-10-25 20:07:00] 📊 Starting previous-day analysis for 2025-10-25 up to 20:07:00.559889
+[2025-10-25 20:07:00] No bars for AAPL
+[2025-10-25 20:07:00] No bars for AXP
+[2025-10-25 20:07:00] No bars for BAC
+[2025-10-25 20:07:00] No bars for NVDA
+[2025-10-25 20:07:00] No bars for TXN
+[2025-10-25 20:07:00] No bars for APLD
+[2025-10-25 20:07:00] 📌 Full-day analysis completed.
+[2025-10-25 20:09:06] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 20:09:08] 📊 Starting previous-day analysis for 2025-10-25 up to 20:09:08.345587
+[2025-10-25 20:09:08] No bars for AAPL
+[2025-10-25 20:09:08] No bars for AXP
+[2025-10-25 20:09:08] No bars for BAC
+[2025-10-25 20:09:08] No bars for NVDA
+[2025-10-25 20:09:08] No bars for TXN
+[2025-10-25 20:09:08] No bars for APLD
+[2025-10-25 20:09:08] 📌 Full-day analysis completed.
+[2025-10-25 20:39:09] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 20:39:11] 📊 Starting previous-day analysis for 2025-10-25 up to 20:39:11.802746
+[2025-10-25 20:39:12] No bars for AAPL
+[2025-10-25 20:39:12] No bars for AXP
+[2025-10-25 20:39:12] No bars for BAC
+[2025-10-25 20:39:12] No bars for NVDA
+[2025-10-25 20:39:12] No bars for TXN
+[2025-10-25 20:39:12] No bars for APLD
+[2025-10-25 20:39:12] 📌 Full-day analysis completed.
+[2025-10-25 20:44:08] 🔴 Market is closed — running previous-day analysis.
+[2025-10-25 20:44:10] 📊 Starting previous-day analysis for 2025-10-25 up to 20:44:10 EST
+[2025-10-25 20:44:11] No data for today. Using previous trading day: 2025-10-24 EST
+[2025-10-25 20:44:11] 🔴 AAPL SELL at 263.26 on 2025-10-24 12:39:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.13, StopDist=0.13
+✅ RSI < 45
+✅ MACD bearish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:12] 🟢 AAPL BUY at 263.67 on 2025-10-24 13:13:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.13, StopDist=0.13
+✅ RSI > 55
+✅ ADX > 25
+✅ MACD bullish
+✅ Volume spike
+❌ ATR in range
+❌ Higher TF bullish
+[2025-10-25 20:44:13] 🔴 AAPL SELL at 263.71 on 2025-10-24 14:17:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.08, StopDist=0.08
+✅ MACD bearish
+❌ RSI < 45
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:13] 🟢 AAPL BUY at 264.03 on 2025-10-24 14:29:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.09, StopDist=0.09
+✅ RSI > 55
+✅ MACD bullish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:14] 🔴 AAPL SELL at 263.85 on 2025-10-24 14:49:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.11, StopDist=0.11
+✅ RSI < 45
+✅ ADX > 25
+✅ MACD bearish
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:15] 🟢 AAPL BUY at 263.51 on 2025-10-24 15:39:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.08, StopDist=0.08
+✅ RSI > 55
+✅ MACD bullish
+✅ Volume spike
+❌ ADX > 25
+❌ ATR in range
+❌ Higher TF bullish
+[2025-10-25 20:44:16] 🔴 AAPL SELL at 263.11 on 2025-10-24 15:52:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.13, StopDist=0.13
+✅ RSI < 45
+✅ MACD bearish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:16] No data for today. Using previous trading day: 2025-10-24 EST
+[2025-10-25 20:44:16] 🔴 AXP SELL at 360.74 on 2025-10-24 11:30:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.22, StopDist=0.22
+✅ MACD bearish
+❌ RSI < 45
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:17] 🟢 AXP BUY at 360.35 on 2025-10-24 14:26:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.15, StopDist=0.15
+✅ RSI > 55
+✅ MACD bullish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:18] 🔴 AXP SELL at 359.70 on 2025-10-24 15:11:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.11, StopDist=0.11
+✅ RSI < 45
+✅ MACD bearish
+✅ Volume spike
+❌ ADX > 25
+❌ ATR in range
+❌ Higher TF bearish
+[2025-10-25 20:44:19] No data for today. Using previous trading day: 2025-10-24 EST
+[2025-10-25 20:44:19] 🔴 BAC SELL at 52.47 on 2025-10-24 10:26:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.03, StopDist=0.03
+✅ RSI < 45
+✅ MACD bearish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:20] 🟢 BAC BUY at 52.58 on 2025-10-24 10:45:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.04, StopDist=0.04
+✅ RSI > 55
+✅ ADX > 25
+✅ MACD bullish
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:20] 🔴 BAC SELL at 52.72 on 2025-10-24 12:09:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.02, StopDist=0.02
+✅ RSI < 45
+✅ MACD bearish
+✅ Volume spike
+❌ ADX > 25
+❌ ATR in range
+❌ Higher TF bearish
+[2025-10-25 20:44:21] 🟢 BAC BUY at 52.59 on 2025-10-24 13:41:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.02, StopDist=0.02
+✅ RSI > 55
+✅ MACD bullish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:22] 🔴 BAC SELL at 52.48 on 2025-10-24 13:53:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.02, StopDist=0.02
+✅ RSI < 45
+✅ ADX > 25
+✅ MACD bearish
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:23] 🟢 BAC BUY at 52.56 on 2025-10-24 14:14:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.01, StopDist=0.01
+✅ RSI > 55
+✅ ADX > 25
+✅ MACD bullish
+✅ Volume spike
+❌ ATR in range
+❌ Higher TF bullish
+[2025-10-25 20:44:24] 🔴 BAC SELL at 52.52 on 2025-10-24 14:38:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.01, StopDist=0.01
+✅ RSI < 45
+✅ MACD bearish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:24] 🟢 BAC BUY at 52.62 on 2025-10-24 14:54:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.02, StopDist=0.02
+✅ RSI > 55
+✅ ADX > 25
+✅ MACD bullish
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:25] 🔴 BAC SELL at 52.57 on 2025-10-24 15:24:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.01, StopDist=0.01
+✅ MACD bearish
+❌ RSI < 45
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:26] No data for today. Using previous trading day: 2025-10-24 EST
+[2025-10-25 20:44:26] 🟢 NVDA BUY at 185.28 on 2025-10-24 10:45:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.14, StopDist=0.14
+✅ RSI > 55
+✅ MACD bullish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:27] 🔴 NVDA SELL at 184.72 on 2025-10-24 11:08:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.18, StopDist=0.18
+✅ RSI < 45
+✅ ADX > 25
+✅ MACD bearish
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:28] 🟢 NVDA BUY at 185.39 on 2025-10-24 11:27:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.13, StopDist=0.13
+✅ RSI > 55
+✅ ADX > 25
+✅ MACD bullish
+✅ Volume spike
+❌ ATR in range
+❌ Higher TF bullish
+[2025-10-25 20:44:28] 🔴 NVDA SELL at 185.17 on 2025-10-24 12:10:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.10, StopDist=0.10
+✅ MACD bearish
+❌ RSI < 45
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:29] 🟢 NVDA BUY at 185.16 on 2025-10-24 12:55:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.08, StopDist=0.08
+❌ RSI > 55
+❌ ADX > 25
+❌ MACD bullish
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:30] 🔴 NVDA SELL at 185.12 on 2025-10-24 13:10:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.06, StopDist=0.06
+✅ MACD bearish
+❌ RSI < 45
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:31] 🟢 NVDA BUY at 185.37 on 2025-10-24 13:40:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.08, StopDist=0.08
+✅ RSI > 55
+✅ ADX > 25
+✅ MACD bullish
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:31] 🔴 NVDA SELL at 185.35 on 2025-10-24 14:25:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.07, StopDist=0.07
+✅ RSI < 45
+✅ MACD bearish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:32] 🟢 NVDA BUY at 185.94 on 2025-10-24 15:00:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.10, StopDist=0.10
+✅ RSI > 55
+✅ ADX > 25
+✅ MACD bullish
+✅ Volume spike
+❌ ATR in range
+❌ Higher TF bullish
+[2025-10-25 20:44:33] 🔴 NVDA SELL at 186.54 on 2025-10-24 15:49:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.12, StopDist=0.12
+✅ RSI < 45
+✅ MACD bearish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:34] Error analyzing NVDA: negative dimensions are not allowed
+[2025-10-25 20:44:34] No data for today. Using previous trading day: 2025-10-24 EST
+[2025-10-25 20:44:34] 🟢 TXN BUY at 169.61 on 2025-10-24 12:04:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.12, StopDist=0.12
+❌ RSI > 55
+❌ ADX > 25
+❌ MACD bullish
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:35] 🔴 TXN SELL at 169.60 on 2025-10-24 12:14:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.12, StopDist=0.12
+✅ MACD bearish
+❌ RSI < 45
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:36] 🟢 TXN BUY at 169.57 on 2025-10-24 13:02:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.06, StopDist=0.06
+✅ RSI > 55
+✅ MACD bullish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:36] 🔴 TXN SELL at 169.12 on 2025-10-24 13:36:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.08, StopDist=0.08
+✅ RSI < 45
+✅ MACD bearish
+✅ Volume spike
+❌ ADX > 25
+❌ ATR in range
+❌ Higher TF bearish
+[2025-10-25 20:44:37] 🟢 TXN BUY at 169.05 on 2025-10-24 15:13:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.08, StopDist=0.08
+✅ Volume spike
+❌ RSI > 55
+❌ ADX > 25
+❌ MACD bullish
+❌ ATR in range
+❌ Higher TF bullish
+[2025-10-25 20:44:38] 🔴 TXN SELL at 168.94 on 2025-10-24 15:15:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.09, StopDist=0.09
+✅ RSI < 45
+✅ MACD bearish
+✅ Volume spike
+❌ ADX > 25
+❌ ATR in range
+❌ Higher TF bearish
+[2025-10-25 20:44:39] 🟢 TXN BUY at 169.30 on 2025-10-24 15:45:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.10, StopDist=0.10
+✅ RSI > 55
+✅ MACD bullish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:39] No data for today. Using previous trading day: 2025-10-24 EST
+[2025-10-25 20:44:40] 🔴 APLD SELL at 34.97 on 2025-10-24 10:36:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.11, StopDist=0.11
+✅ RSI < 45
+✅ MACD bearish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:40] 🟢 APLD BUY at 33.63 on 2025-10-24 15:08:00
+Reason: SMA20 crossed above SMA50 (Bullish trend)
+ATR=0.08, StopDist=0.08
+✅ RSI > 55
+✅ MACD bullish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bullish
+[2025-10-25 20:44:41] 🔴 APLD SELL at 33.12 on 2025-10-24 15:42:00
+Reason: SMA20 crossed below SMA50 (Bearish trend)
+ATR=0.09, StopDist=0.09
+✅ RSI < 45
+✅ MACD bearish
+❌ ADX > 25
+❌ ATR in range
+❌ Volume spike
+❌ Higher TF bearish
+[2025-10-25 20:44:42] Error analyzing APLD: negative dimensions are not allowed
+[2025-10-25 20:44:42] 📌 Full-day analysis completed.

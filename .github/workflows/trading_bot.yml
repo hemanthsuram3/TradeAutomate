@@ -1,0 +1,84 @@
+name: Trading Bot Schedule
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 12-14 * * 1-5'  # Morning pre-market
+    - cron: '0 21 * * 1-5'   # After-market previous-day analysis
+    - cron: '*/10 13-21 * * 1-5'  # Live trading
+    - cron: '0 6 * * 1-5'    # Nightly backtest + auto-train
+
+jobs:
+  trading_bot:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pandas lxml html5lib yfinance scikit-learn ta requests
+
+      - name: Create Google credentials
+        run: echo '${{ secrets.SERVICE_ACCOUNT_JSON }}' > google_creds.json
+
+      - name: Set env vars
+        run: echo "Env vars loaded"
+        env:
+          ALPACA_KEY: ${{secrets.ALPACA_KEY}}
+          ALPACA_SECRET: ${{secrets.ALPACA_SECRET}}
+          TELEGRAM_TOKEN: ${{secrets.TELEGRAM_TOKEN}}
+          TELEGRAM_CHAT_ID: ${{secrets.TELEGRAM_CHAT_ID}}
+          FMP_API_KEY: ${{secrets.FMP_API_KEY}}
+          NEWS_API_KEY: ${{secrets.NEWS_API_KEY}}
+
+      - name: Morning Scan
+        if: github.event_name == 'schedule' && github.event.schedule == '*/15 12-14 * * 1-5' 
+        env:
+          ALPACA_KEY: ${{secrets.ALPACA_KEY}}
+          ALPACA_SECRET: ${{secrets.ALPACA_SECRET}}
+          TELEGRAM_TOKEN: ${{secrets.TELEGRAM_TOKEN}}
+          TELEGRAM_CHAT_ID: ${{secrets.TELEGRAM_CHAT_ID}}
+          FMP_API_KEY: ${{secrets.FMP_API_KEY}}
+          NEWS_API_KEY: ${{secrets.NEWS_API_KEY}}
+        run: python moving_average_bot.py morning
+
+      - name: Previous-Day Analysis
+        if: github.event_name == 'schedule' && github.event.schedule == '0 21 * * 1-5' || github.event_name == 'workflow_dispatch'
+        env:
+          ALPACA_KEY: ${{secrets.ALPACA_KEY}}
+          ALPACA_SECRET: ${{secrets.ALPACA_SECRET}}
+          TELEGRAM_TOKEN: ${{secrets.TELEGRAM_TOKEN}}
+          TELEGRAM_CHAT_ID: ${{secrets.TELEGRAM_CHAT_ID}}
+          FMP_API_KEY: ${{secrets.FMP_API_KEY}}
+          NEWS_API_KEY: ${{secrets.NEWS_API_KEY}}
+        run: python moving_average_bot.py analysis
+
+      - name: Live Trading
+        if: github.event_name == 'schedule' && startsWith(github.event.schedule, '*/10') 
+        env:
+          ALPACA_KEY: ${{secrets.ALPACA_KEY}}
+          ALPACA_SECRET: ${{secrets.ALPACA_SECRET}}
+          TELEGRAM_TOKEN: ${{secrets.TELEGRAM_TOKEN}}
+          TELEGRAM_CHAT_ID: ${{secrets.TELEGRAM_CHAT_ID}}
+          FMP_API_KEY: ${{secrets.FMP_API_KEY}}
+          NEWS_API_KEY: ${{secrets.NEWS_API_KEY}}
+        run: python moving_average_bot.py live
+
+      - name: Backtest + Auto-Train
+        if: github.event_name == 'schedule' && github.event.schedule == '0 6 * * 1-5'
+        env:
+          ALPACA_KEY: ${{secrets.ALPACA_KEY}}
+          ALPACA_SECRET: ${{secrets.ALPACA_SECRET}}
+          TELEGRAM_TOKEN: ${{secrets.TELEGRAM_TOKEN}}
+          TELEGRAM_CHAT_ID: ${{secrets.TELEGRAM_CHAT_ID}}
+          FMP_API_KEY: ${{secrets.FMP_API_KEY}}
+          NEWS_API_KEY: ${{secrets.NEWS_API_KEY}}
+        run: |
+        
+          
